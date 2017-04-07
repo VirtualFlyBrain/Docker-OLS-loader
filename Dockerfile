@@ -19,4 +19,4 @@ COPY loadOLS.sh /opt/VFB/loadOLS.sh
 
 RUN chmod +x /opt/VFB/loadOLS.sh
 
-ENTRYPOINT ['/opt/VFB/loadOLS.sh']
+ENTRYPOINT ["/bin/bash -c /opt/VFB/loadOLS.sh"]
