@@ -19,4 +19,4 @@ COPY loadOLS.sh ${WORKSPACE}/loadOLS.sh
 
 RUN chmod +x ${WORKSPACE}/loadOLS.sh
 
-ENTRYPOINT ['${WORKSPACE}/loadOLS.sh']
+ENTRYPOINT ["${WORKSPACE}/loadOLS.sh"]
