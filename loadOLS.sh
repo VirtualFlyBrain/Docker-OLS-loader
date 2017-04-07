@@ -5,7 +5,7 @@ git clone https://github.com/VirtualFlyBrain/VFB_owl.git
 cd ${WORKSPACE}/VFB_owl
 git checkout tags/${VFB_OWL_VERSION}
 cd ${WORKSPACE}/VFB_owl
-find . -name '*.gz' -exec pigz -dvf '{}' \;
+find . -name '*.gz' -exec gzip -dvf '{}' \;
 
 
 cd ${WORKSPACE}/OLS
