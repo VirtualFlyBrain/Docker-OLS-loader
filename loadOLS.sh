@@ -10,23 +10,23 @@ find . -name '*.gz' -exec gzip -dvf '{}' \;
 
 cd ${WORKSPACE}/OLS
 echo '** loading vfb to OLS **'
-java -Xmx2g -jar -Dspring.profiles.active=vfb -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
+java -jar -Dspring.profiles.active=vfb -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
 
 echo ''
 echo '** loading fbdv to OLS **'
 
-java -Xmx2g -jar -Dspring.profiles.active=fbdv -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
+java -jar -Dspring.profiles.active=fbdv -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
 
 
 echo ''
 echo '** loading fbcv to OLS **'
 
-java -Xmx2g -jar -Dspring.profiles.active=fbcv -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
+java -jar -Dspring.profiles.active=fbcv -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
 
 echo ''
 echo '** loading fbbi to OLS **'
 
-java -Xmx2g -jar -Dspring.profiles.active=fbbi -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
+java -jar -Dspring.profiles.active=fbbi -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
 chmod -R 777 ${WORKSPACE}/neo4j
 
 mv ${WORKSPACE}/neo4j /data/
