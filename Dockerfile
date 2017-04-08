@@ -4,6 +4,8 @@ ENV VFB_OWL_VERSION=Current
 
 ENV WORKSPACE=/opt/VFB
 
+ENV JAVA_OPTS='-Xmx20g -Xms10g'
+
 VOLUME /data
 
 RUN echo Building OLS && \
