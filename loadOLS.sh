@@ -29,4 +29,4 @@ echo '** loading fbbi to OLS **'
 java -jar -Dspring.profiles.active=fbbi -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
 chmod -R 777 ${WORKSPACE}/neo4j
 
-mv ${WORKSPACE}/neo4j /data/
+cp -r ${WORKSPACE}/neo4j /data/
