@@ -23,6 +23,8 @@ git clone https://github.com/VirtualFlyBrain/owltools.git && \
 cd ${WORKSPACE}/owltools/OWLTools-Parent && \
 mvn install
 
+ENV PATH=$PATH":${WORKSPACE}/owltools/OWLTools-Runner/bin:"
+
 COPY loadOLS.sh /opt/VFB/loadOLS.sh
 
 RUN chmod +x /opt/VFB/loadOLS.sh
