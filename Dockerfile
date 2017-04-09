@@ -17,6 +17,12 @@ cp ${WORKSPACE}/OLS_configs/*.properties ${WORKSPACE}/OLS/ols-apps/ols-neo4j-app
 cd ${WORKSPACE}/OLS && \
 mvn clean package
 
+RUN echo Building owltools && \
+cd ${WORKSPACE} && \
+git clone https://github.com/VirtualFlyBrain/owltools.git && \
+cd ${WORKSPACE}/owltools && \
+mvn install
+
 COPY loadOLS.sh /opt/VFB/loadOLS.sh
 
 RUN chmod +x /opt/VFB/loadOLS.sh
