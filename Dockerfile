@@ -20,7 +20,7 @@ mvn clean package
 RUN echo Building owltools && \
 cd ${WORKSPACE} && \
 git clone https://github.com/VirtualFlyBrain/owltools.git && \
-cd ${WORKSPACE}/owltools && \
+cd ${WORKSPACE}/owltools/OWLTools-Parent && \
 mvn install
 
 COPY loadOLS.sh /opt/VFB/loadOLS.sh
