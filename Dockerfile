@@ -28,6 +28,8 @@ git clone https://github.com/VirtualFlyBrain/owltools.git && \
 cd ${WORKSPACE}/owltools/OWLTools-Parent && \
 mvn install
 
+RUN curl https://releases.rancher.com/install-docker/1.13.sh \| sh
+
 ENV PATH=$PATH":${WORKSPACE}/owltools/OWLTools-Runner/bin:"
 
 COPY loadOLS.sh /opt/VFB/loadOLS.sh
