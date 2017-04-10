@@ -6,11 +6,10 @@ ENV WORKSPACE=/opt/VFB
 
 ENV JAVA_OPTS='-Xmx20g -Xms10g'
 
-ENV KBuser='neo4j' 
-ENV KBpassword='neo4j' 
-ENV LMBuser='flycircuit' 
+ENV PDBuser='neo4j' 
+ENV PDBpassword='neo4j' 
 ENV FILESERVER='tftp://vfbds0.inf.ed.ac.uk' 
-ENV PRODSERVER='http://localhost:7474'
+ENV PDBSERVER='http://localhost:7474'
 
 VOLUME /data
 
