@@ -22,18 +22,8 @@ cp ${WORKSPACE}/OLS_configs/*.properties ${WORKSPACE}/OLS/ols-apps/ols-neo4j-app
 cd ${WORKSPACE}/OLS && \
 mvn clean package
 
-RUN echo Building owltools && \
-cd ${WORKSPACE} && \
-git clone https://github.com/VirtualFlyBrain/owltools.git && \
-cd ${WORKSPACE}/owltools/OWLTools-Parent && \
-mvn install
-
-RUN curl https://releases.rancher.com/install-docker/1.13.sh | sh
-
-ENV PATH=$PATH":${WORKSPACE}/owltools/OWLTools-Runner/bin:"
-
 COPY loadOLS.sh /opt/VFB/loadOLS.sh
 
 RUN chmod +x /opt/VFB/loadOLS.sh
 
-ENTRYPOINT ["/bin/bash -c /opt/VFB/loadOLS.sh"]
+ENTRYPOINT ["/opt/VFB/loadOLS.sh"]
