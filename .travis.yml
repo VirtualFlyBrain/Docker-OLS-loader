@@ -1,5 +1,7 @@
 services:
   - docker 
 script:
+  - echo -e "travis_fold:start:docker-build"
   - docker build -t test-image:test .
+  - echo -e "travis_fold:end:docker-build"
   - docker run --name test test-image:test
