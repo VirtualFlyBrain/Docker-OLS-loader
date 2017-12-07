@@ -1,7 +1,5 @@
 services:
-  - docker
-  
+  - docker 
 script:
   - docker build -t test-image:test .
   - docker run --name test test-image:test
-  
