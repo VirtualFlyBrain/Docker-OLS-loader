@@ -36,8 +36,4 @@ COPY loadOLS.sh /opt/VFB/loadOLS.sh
 
 RUN chmod +x /opt/VFB/loadOLS.sh
 
-RUN mkdir -p /opt/VFB/jython
-
-ADD http://search.maven.org/remotecontent?filepath=org/python/jython-standalone/2.7.0/jython-standalone-2.7.0.jar /opt/VFB/jython/jython.jar
-
 ENTRYPOINT ["/bin/bash -c /opt/VFB/loadOLS.sh"]
