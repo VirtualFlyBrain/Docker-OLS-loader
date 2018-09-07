@@ -17,7 +17,7 @@ RUN echo Building OLS && \
 mkdir -p ${WORKSPACE} && \
 cd ${WORKSPACE} && \
 git clone https://github.com/VirtualFlyBrain/OLS_configs.git && \
-git clone https://github.com/EBISPOT/OLS.git && \
+git clone https://github.com/matentzn/OLS.git && \
 cp ${WORKSPACE}/OLS_configs/*.properties ${WORKSPACE}/OLS/ols-apps/ols-neo4j-app/src/main/resources/ && \
 cd ${WORKSPACE}/OLS && \
 mvn clean package
