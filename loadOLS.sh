@@ -24,6 +24,11 @@ echo '** loading fbcv to OLS **'
 java -jar -Dspring.profiles.active=fbcv -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
 
 echo ''
+echo '** loading ro to OLS **'
+
+java -jar -Dspring.profiles.active=ro -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
+
+echo ''
 echo '** loading so to OLS **'
 
 java -jar -Dspring.profiles.active=so -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
