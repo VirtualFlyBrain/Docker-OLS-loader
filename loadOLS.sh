@@ -29,6 +29,11 @@ echo '** loading so to OLS **'
 java -jar -Dspring.profiles.active=so -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
 
 echo ''
+echo '** loading geno to OLS **'
+
+java -jar -Dspring.profiles.active=geno -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
+
+echo ''
 echo '** loading fbbi to OLS **'
 
 java -jar -Dspring.profiles.active=fbbi -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
