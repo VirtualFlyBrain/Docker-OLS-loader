@@ -20,7 +20,7 @@ git clone https://github.com/VirtualFlyBrain/OLS_configs.git && \
 git clone https://github.com/Robbie1977/OLS.git && \
 cp ${WORKSPACE}/OLS_configs/*.properties ${WORKSPACE}/OLS/ols-apps/ols-neo4j-app/src/main/resources/ && \
 cd ${WORKSPACE}/OLS && \
-mvn clean package -Djdk.net.URLClassPath.disableClassPathURLCheck=true
+mvn clean package
 
 COPY loadOLS.sh /opt/VFB/loadOLS.sh
 
