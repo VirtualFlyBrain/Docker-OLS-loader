@@ -13,6 +13,11 @@ echo '** loading vfb to OLS **'
 java -jar -Dspring.profiles.active=vfb -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
 
 echo ''
+echo '** loading vfb_ext to OLS **'
+java -jar -Dspring.profiles.active=vfb_ext -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
+
+echo ''
+
 echo '** loading fbdv to OLS **'
 
 java -jar -Dspring.profiles.active=fbdv -Dols.home=${WORKSPACE} ols-apps/ols-neo4j-app/target/ols-neo4j-app.jar
