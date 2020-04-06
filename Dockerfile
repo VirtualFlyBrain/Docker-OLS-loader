@@ -13,6 +13,11 @@ ENV PDBSERVER='http://localhost:7474'
 
 VOLUME /data
 
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get install -y build-essential
+RUN apt-get clean all
+
 RUN echo Building OLS && \
 mkdir -p ${WORKSPACE} && \
 cd ${WORKSPACE} && \
