@@ -1,9 +1,7 @@
 #!/bin/bash
 
 cd ${WORKSPACE}
-git clone --depth 1 https://github.com/VirtualFlyBrain/VFB_owl.git
-cd ${WORKSPACE}/VFB_owl
-git checkout --depth 1 tags/${VFB_OWL_VERSION}
+git clone --depth 1 --branch ${VFB_OWL_VERSION} https://github.com/VirtualFlyBrain/VFB_owl.git
 cd ${WORKSPACE}/VFB_owl
 find . -name '*.gz' -exec gzip -dvf '{}' \;
 
